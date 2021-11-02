@@ -1,3 +1,124 @@
-h4 {
-    color: cornflowerblue;
+/*h4 {*/
+/*    color: cornflowerblue;*/
+/*}*/
+:root {
+    --clr-graylight: #faf2f6;
+    --clr-white: #f1faee;
+    --clr-graymed: #78909c;
+    --clr-graydark: #37474f;
+    --clr-primary: #e63946;
+    --clr-primaryhover: #fce4ec;
+    --clr-primaryfocus: #f48fb1;
+    --clr-primarydark: #6b2b5e;
+    --radius: 0.5rem;
+    --padding: 1rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--clr-graydark\\);
+}
+
+body::before {
+    background-color: blue;
+    display: block;
+    position: absolute;
+    background-blend-mode: multiply;
+    opacity: 0.4;
+    filter: brightness(3);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.wrapper {
+    background: white;
+    align: center;
+    width: 20rem;
+    padding: 2rem;
+    border-radius: var(--radius);
+    margin: 6rem auto;
+}
+
+.title {
+    font-family: "Didot";
+    font-weight: normal;
+    color: var(--clr-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.form-label {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.form-input {
+    border: none;
+    background-color: var(--clr-graylight);
+    border-radius: var(--radius);
+    padding: var(--padding);
+    font-family: inherit;
+    color: inherit;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    transition: 250ms all ease-in;
+}
+
+.form-input:hover {
+    border: 1px solid var(--clr-primaryhover);
+    box-shadow: 0 0 5px var(--clr-primaryhover);
+    background: white;
+}
+
+.form-input:focus {
+    border: 1px solid var(--clr-primaryfocus);
+    box-shadow: 0 0 5px var(--clr-primaryhover);
+    background: white;
+}
+
+.form-input::placeholder {
+    color: var(--clr-graymed);
+}
+
+.btn-primary {
+    border: none;
+    background: var(--clr-primary);
+    color: white;
+    border-radius: var(--radius);
+    padding: var(--padding);
+    margin-top: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    width: 16rem;
+    cursor: pointer;
+    transition: 250ms all ease-in;
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-primarydark);
 }
